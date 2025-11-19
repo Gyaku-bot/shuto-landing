@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,4 +14,25 @@ html,
 body {
   height: 100%;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Animation trace progressive du cercle */
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 345;
+    opacity: 0.5;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -345;
+    opacity: 0.5;
+  }
+}
+
+.animate-draw-circle {
+  stroke-dasharray: 345;
+  animation: drawCircle 4s ease-in-out infinite;
 }
