@@ -22,7 +22,7 @@ export default function Logo() {
           cy="100"
           r="55"
           fill="none"
-          stroke="#9B87C7"
+          stroke="#FFFFFF"
           strokeWidth="4"
           filter="url(#glow)"
           className="animate-draw-circle"
@@ -34,7 +34,7 @@ export default function Logo() {
           fontSize="80"
           fontWeight="900"
           fill="none"
-          stroke="#6B4FA3"
+          stroke="#818CF8"
           strokeWidth="2"
           textAnchor="middle"
           filter="url(#glow)"
@@ -42,7 +42,7 @@ export default function Logo() {
           S
         </text>
       </svg>
-      <div className="text-[#6B4FA3] text-3xl md:text-4xl font-light tracking-[0.3em] uppercase">
+      <div className="text-[#818CF8] text-3xl md:text-4xl font-light tracking-[0.3em] uppercase" style={{ textShadow: '0 0 8px rgba(129, 140, 248, 0.5)' }}>
         SHUTO
       </div>
     </div>

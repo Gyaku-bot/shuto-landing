@@ -2,11 +2,11 @@ import Logo from '@/components/Logo';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#E6E0F5] via-[#F5F3FA] to-[#E6E0F5] text-gray-900">
+    <main className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative">
         {/* Subtle background glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#9B87C7]/10 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#6366F1]/20 via-transparent to-transparent pointer-events-none" />
 
         <div className="max-w-5xl mx-auto text-center space-y-12 relative z-10">
           <div className="animate-fade-in">
@@ -15,12 +15,12 @@ export default function Home() {
 
           <div className="space-y-6 pt-8">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wide leading-tight">
-              <span className="font-extralight text-gray-600">Vos données.</span>{' '}
-              <span className="font-extralight text-gray-600">Vos décisions.</span>{' '}
-              <span className="font-normal text-[#6B4FA3]">Automatisées.</span>
+              <span className="font-extralight text-white/80">Vos données.</span>{' '}
+              <span className="font-extralight text-white/80">Vos décisions.</span>{' '}
+              <span className="font-normal text-[#818CF8]">Automatisées.</span>
             </h1>
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#9B87C7] to-transparent mx-auto" />
-            <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#818CF8] to-transparent mx-auto" />
+            <p className="text-sm md:text-base text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
               Dashboards sur-mesure et automatisations intelligentes : des données actionnables,
               des process fluides, un temps optimisé pour vous recentrer sur votre véritable métier.
             </p>
@@ -29,7 +29,7 @@ export default function Home() {
           <div className="pt-8">
             <a
               href="mailto:quentin@shuto.ai"
-              className="group inline-flex items-center gap-3 px-10 py-4 border border-[#9B87C7]/40 hover:border-[#7B5FA8] text-[#6B4FA3] hover:text-[#5A3E8B] font-light rounded-full transition-all duration-500 hover:shadow-[0_0_30px_rgba(155,135,199,0.3)] backdrop-blur-sm bg-white/50"
+              className="group inline-flex items-center gap-3 px-10 py-4 border border-[#818CF8]/40 hover:border-[#818CF8] text-[#818CF8] hover:text-white font-light rounded-full transition-all duration-500 hover:shadow-[0_0_30px_rgba(129,140,248,0.4)] backdrop-blur-sm bg-white/5"
             >
               <span>Parlons-en</span>
               <svg
@@ -54,20 +54,20 @@ export default function Home() {
       <section className="py-20 px-6 relative">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-light text-gray-700 mb-4">
+            <h2 className="text-2xl md:text-3xl font-light text-white/90 mb-4">
               Services
             </h2>
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9B87C7] to-transparent mx-auto" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#818CF8] to-transparent mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Dashboard */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#9B87C7]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-              <div className="relative bg-white/60 backdrop-blur-sm border border-[#9B87C7]/20 hover:border-[#7B5FA8]/40 rounded-2xl p-10 transition-all duration-500">
-                <div className="w-14 h-14 rounded-full border border-[#9B87C7]/30 flex items-center justify-center mb-8 group-hover:border-[#7B5FA8]/50 transition-colors duration-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#818CF8]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#818CF8]/40 rounded-2xl p-10 transition-all duration-500">
+                <div className="w-14 h-14 rounded-full border border-[#818CF8]/30 flex items-center justify-center mb-8 group-hover:border-[#818CF8]/50 transition-colors duration-500">
                   <svg
-                    className="w-6 h-6 text-[#6B4FA3]"
+                    className="w-6 h-6 text-[#818CF8]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -80,8 +80,8 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-light mb-4 text-gray-800">Dashboards sur mesure</h3>
-                <p className="text-gray-600 leading-relaxed font-light text-sm">
+                <h3 className="text-xl font-light mb-4 text-white">Dashboards sur mesure</h3>
+                <p className="text-white/70 leading-relaxed font-light text-sm">
                   Conception et développement de tableaux de bord personnalisés pour visualiser vos KPIs et piloter votre activité en temps réel.
                 </p>
               </div>
@@ -89,11 +89,11 @@ export default function Home() {
 
             {/* Marketing Automation */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#9B87C7]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-              <div className="relative bg-white/60 backdrop-blur-sm border border-[#9B87C7]/20 hover:border-[#7B5FA8]/40 rounded-2xl p-10 transition-all duration-500">
-                <div className="w-14 h-14 rounded-full border border-[#9B87C7]/30 flex items-center justify-center mb-8 group-hover:border-[#7B5FA8]/50 transition-colors duration-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#818CF8]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#818CF8]/40 rounded-2xl p-10 transition-all duration-500">
+                <div className="w-14 h-14 rounded-full border border-[#818CF8]/30 flex items-center justify-center mb-8 group-hover:border-[#818CF8]/50 transition-colors duration-500">
                   <svg
-                    className="w-6 h-6 text-[#6B4FA3]"
+                    className="w-6 h-6 text-[#818CF8]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -106,8 +106,8 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-light mb-4 text-gray-800">Automatisations intelligentes</h3>
-                <p className="text-gray-600 leading-relaxed font-light text-sm">
+                <h3 className="text-xl font-light mb-4 text-white">Automatisations intelligentes</h3>
+                <p className="text-white/70 leading-relaxed font-light text-sm">
                   Automatisation de vos campagnes marketing, workflows intelligents et optimisation de vos conversions.
                 </p>
               </div>
@@ -120,18 +120,18 @@ export default function Home() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <div className="space-y-4">
-            <h2 className="text-2xl md:text-3xl font-light text-gray-700">
+            <h2 className="text-2xl md:text-3xl font-light text-white/90">
               Prêt à démarrer ?
             </h2>
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9B87C7] to-transparent mx-auto" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#818CF8] to-transparent mx-auto" />
           </div>
-          <p className="text-base text-gray-600 font-light">
+          <p className="text-base text-white/70 font-light">
             Discutons de votre projet
           </p>
           <div className="pt-2">
             <a
               href="mailto:quentin@shuto.ai"
-              className="group inline-flex items-center gap-3 text-[#6B4FA3] hover:text-[#5A3E8B] text-base font-light transition-colors duration-300"
+              className="group inline-flex items-center gap-3 text-[#818CF8] hover:text-white text-base font-light transition-colors duration-300"
             >
               <span>quentin@shuto.ai</span>
               <svg
@@ -153,8 +153,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-[#9B87C7]/20">
-        <div className="max-w-6xl mx-auto text-center text-gray-500 text-xs font-light tracking-wide">
+      <footer className="py-8 px-6 border-t border-white/20">
+        <div className="max-w-6xl mx-auto text-center text-white/50 text-xs font-light tracking-wide">
           <p>© {new Date().getFullYear()} Shuto. Tous droits réservés.</p>
         </div>
       </footer>
