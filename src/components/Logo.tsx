@@ -10,7 +10,7 @@ export default function Logo() {
       >
         <defs>
           <filter id="glow">
-            <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
             <feMerge>
               <feMergeNode in="coloredBlur" />
               <feMergeNode in="SourceGraphic" />
@@ -22,7 +22,7 @@ export default function Logo() {
           cy="100"
           r="55"
           fill="none"
-          stroke="#FFFFFF"
+          stroke="#2C2C2C"
           strokeWidth="4"
           filter="url(#glow)"
           className="animate-draw-circle"
@@ -34,7 +34,7 @@ export default function Logo() {
           fontSize="80"
           fontWeight="900"
           fill="none"
-          stroke="#818CF8"
+          stroke="#E07862"
           strokeWidth="2"
           textAnchor="middle"
           filter="url(#glow)"
@@ -42,7 +42,7 @@ export default function Logo() {
           S
         </text>
       </svg>
-      <div className="text-[#818CF8] text-3xl md:text-4xl font-light tracking-[0.3em] uppercase" style={{ textShadow: '0 0 8px rgba(129, 140, 248, 0.5)' }}>
+      <div className="text-[#E07862] text-3xl md:text-4xl font-light tracking-[0.3em] uppercase" style={{ textShadow: '0 0 8px rgba(224, 120, 98, 0.3)' }}>
         SHUTO
       </div>
     </div>

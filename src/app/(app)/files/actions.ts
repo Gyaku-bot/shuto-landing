@@ -3,6 +3,14 @@
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
 
+function sanitizePath(segment: string): string {
+  return segment
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // remove diacritics
+    .replace(/\s+/g, '_')           // spaces → underscores
+    .replace(/[^a-zA-Z0-9_\-\.\/]/g, '') // keep only safe chars
+}
+
 export async function getFiles(folder: string = '') {
   const supabase = await createClient()
   const { data, error } = await supabase
@@ -24,7 +32,9 @@ export async function uploadFile(formData: FormData) {
   const file = formData.get('file') as File
   const folder = (formData.get('folder') as string) || ''
 
-  const storagePath = `${user.id}/${folder ? folder + '/' : ''}${Date.now()}_${file.name}`
+  const safeFolderPath = folder ? sanitizePath(folder) + '/' : ''
+  const safeFileName = sanitizePath(file.name)
+  const storagePath = `${user.id}/${safeFolderPath}${safeFileName}`
 
   const { error: uploadError } = await supabase.storage
     .from('user-files')
@@ -64,6 +74,32 @@ export async function createFolder(name: string, parentFolder: string = '') {
   if (error) throw error
   revalidatePath('/files')
   return folderPath
+}
+
+export async function ensureFolderExists(name: string, parentFolder: string = '') {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) throw new Error('Not authenticated')
+
+  const { data: existing } = await supabase
+    .from('files')
+    .select('id')
+    .eq('user_id', user.id)
+    .eq('name', name)
+    .eq('folder', parentFolder)
+    .eq('mime_type', 'application/x-directory')
+    .maybeSingle()
+
+  if (existing) return
+
+  await supabase.from('files').insert({
+    user_id: user.id,
+    name,
+    storage_path: '',
+    size: 0,
+    mime_type: 'application/x-directory',
+    folder: parentFolder,
+  })
 }
 
 export async function deleteFile(id: string, storagePath: string, isFolder: boolean) {
