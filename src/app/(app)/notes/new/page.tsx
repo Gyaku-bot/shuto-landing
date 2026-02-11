@@ -1,17 +1,7 @@
-'use client'
+export const dynamic = 'force-dynamic'
 
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-import { createNote } from '../actions'
+import NewNoteRedirect from './NewNoteRedirect'
 
 export default function NewNotePage() {
-  const router = useRouter()
-
-  useEffect(() => {
-    createNote().then((note) => {
-      router.replace(`/notes/${note.id}`)
-    })
-  }, [router])
-
-  return null
+  return <NewNoteRedirect />
 }
