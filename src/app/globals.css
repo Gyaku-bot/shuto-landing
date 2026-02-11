@@ -16,23 +16,10 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* Animation trace progressive du cercle */
-@keyframes drawCircle {
-  0% {
-    stroke-dashoffset: 345;
-    opacity: 0.5;
-  }
-  50% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: -345;
-    opacity: 0.5;
-  }
-}
-
-.animate-draw-circle {
-  stroke-dasharray: 345;
-  animation: drawCircle 4s ease-in-out infinite;
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
