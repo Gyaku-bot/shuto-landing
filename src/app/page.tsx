@@ -95,22 +95,22 @@ export default function Home() {
             {/* Left: Text */}
             <div>
               <div className="animate-fade-in-up">
-                <span className="inline-flex items-center gap-2 text-[#FF0033] text-base font-medium mb-5">
-                  <span className="w-1.5 h-1.5 bg-[#FF0033] rounded-full" />
+                <span className="inline-flex items-center gap-2 bg-[#FF0033]/10 text-[#FF0033] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
+                  <svg className="w-3.5 h-3.5 fill-[#FF0033]" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 10 10-12h-9l1-10z"/></svg>
                   Pilotage de marque automatisé
                 </span>
               </div>
 
-              <h1 className="text-2xl md:text-[2rem] font-extrabold tracking-tight text-black leading-[1.2] animate-fade-in-up-delay-1">
-                Vos KPIs de marque :
+              <h1 className="text-[1.4rem] md:text-[1.75rem] font-extrabold tracking-tight text-black leading-[1.2] animate-fade-in-up-delay-1 whitespace-nowrap">
+                Un seul endroit pour vos KPIs de marque.
                 <br />
-                <span className="whitespace-nowrap">zéro bruit, zéro effort, zéro délai.</span>
+                <span className="whitespace-nowrap">Zéro bruit, zéro effort, zéro délai.</span>
               </h1>
 
-              <p className="mt-5 text-base md:text-lg text-neutral-400 leading-relaxed max-w-lg animate-fade-in-up-delay-2">
-                Shuto crée des dashboards de pilotage de marque.
+              <p className="mt-5 text-xs md:text-sm text-neutral-400 leading-relaxed max-w-lg animate-fade-in-up-delay-2">
+                Shuto centralise vos données de marque dans un dashboard sur-mesure.
                 <br />
-                Sur-mesure. Automatisé. Pour décider, pas pour compiler.
+                Automatisé. Prêt à l'emploi. Pour décider, pas pour compiler.
               </p>
 
               <div className="mt-8 flex items-center gap-4 animate-fade-in-up-delay-3">
@@ -132,7 +132,7 @@ export default function Home() {
               <div className="mt-8 flex items-center gap-5 animate-fade-in-up-delay-3">
                 <span className="flex items-center gap-1.5 text-xs text-neutral-400">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#FF0033]" />
-                  Gratuit, sans engagement
+                  Données en temps réel
                 </span>
                 <span className="flex items-center gap-1.5 text-xs text-neutral-400">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#FF0033]" />
