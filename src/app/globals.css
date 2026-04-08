@@ -19,13 +19,13 @@
   body {
     height: 100%;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: #FAFAF7;
-    color: #292524;
+    background-color: #ffffff;
+    color: #111;
   }
 
   ::selection {
-    background-color: rgba(234, 88, 12, 0.12);
-    color: #292524;
+    background-color: rgba(255, 0, 51, 0.15);
+    color: #111;
   }
 
   ::-webkit-scrollbar {
@@ -35,11 +35,11 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: #D6D3D1;
+    background: #ddd;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #A8A29E;
+    background: #bbb;
   }
 }
 
@@ -54,12 +54,18 @@
   }
 }
 
-@keyframes pulse-soft {
-  0%, 100% {
-    opacity: 0.3;
+@keyframes draw-circle {
+  0% {
+    stroke-dashoffset: 345;
+    opacity: 0.5;
   }
   50% {
-    opacity: 0.6;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -345;
+    opacity: 0.5;
   }
 }
 
@@ -82,6 +88,7 @@
   opacity: 0;
 }
 
-.animate-pulse-soft {
-  animation: pulse-soft 5s ease-in-out infinite;
+.animate-draw-circle {
+  stroke-dasharray: 345;
+  animation: draw-circle 4s ease-in-out infinite;
 }
